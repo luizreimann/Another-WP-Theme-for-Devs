@@ -1,0 +1,63 @@
+.technology{
+
+    background-image: url('../images/banner-about.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h2, h3{
+        color: $text-white;
+        font-weight: $bold;
+    }
+    h3{
+        font-size: 25px;
+    }
+    h4{
+        color: $text-gray;
+        font-size: 20px;
+        margin-bottom: 0;
+        strong{
+            color: $text-white;
+        }
+        @media (max-width: $mobile-breakpoint){
+            font-size: 18px;
+        }
+    }
+    .education-topic p{
+        color: $text-gray;
+        text-align: justify;
+        text-justify: auto;
+        @media (max-width: $mobile-breakpoint){
+            font-size: 17px;
+            text-align: center;
+            margin-bottom: 1em;
+        }
+    }
+
+    .my-skills{
+        p{
+            color: $text-white;
+            margin: 0;
+        }
+
+        .progress-bar{
+            width: 100%;
+            height: 10px;
+            background-color: #333;
+            position: relative;
+            border-radius: $border-radius;
+            overflow: hidden;
+
+            .progress-fill {
+                width: 0%;
+                height: 100%;
+                background-color: $text-gray;
+                border-radius: $border-radius;
+                transition: width 1s ease;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+}

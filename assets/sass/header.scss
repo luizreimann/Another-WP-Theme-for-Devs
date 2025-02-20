@@ -1,0 +1,99 @@
+.site-header{
+    background-color: transparent;
+
+    .navbar-brand{
+        padding-bottom: 0;
+        
+        img{
+            width: 170px;
+        }
+    }
+
+    .navbar-collapse{
+        margin-right: 3em;
+        margin-bottom: -3px; // Fix Bootstrap align
+    }
+
+    .menu-item{
+        margin-right: 20px;
+
+        a{
+            color: $text-gray;
+            font-weight: $normal;
+            text-decoration: none;
+            transition: 0.3s all;
+
+            &:hover{
+                color: $text-white;
+            }
+        }
+    }
+
+    .lang-flag{
+        width: 30px;
+    }
+
+    .custom-toggler {
+        border: none;
+        background-color: transparent;
+        margin-bottom: -5px;
+        border: 1px solid #fff;
+      
+        .navbar-toggler-icon {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1.0)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      
+        &:hover, &:focus {
+          outline: none;
+          .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 0.75)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+          }
+        }
+      }
+
+    #mobile-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 9999;
+        display: none;
+        justify-content: center;
+        align-items: center;
+
+        .mobile-menu-list {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+
+            li {
+            margin: 15px 0;
+
+            a {
+                font-size: 24px;
+                color: $text-gray;
+                text-decoration: none;
+
+                &:hover {
+                color: $text-white;
+                }
+            }
+            }
+        }
+    }
+
+    .show {
+        display: flex !important;
+    }
+
+    @media (min-width: $mobile-breakpoint) {
+        #mobile-menu {
+            display: none !important;
+        }
+    }
+}

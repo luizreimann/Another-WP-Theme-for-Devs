@@ -1,0 +1,60 @@
+.about-me{
+
+    h2{
+        color: #000;
+        font-weight: $bold;
+    }
+    p{
+        color: $text-gray;
+        text-align: justify;
+        text-justify: auto;
+        @media (max-width: $mobile-breakpoint){
+            font-size: 17px;
+        }
+    }
+
+    .pp-column{
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 45px;
+            right: 90px;
+            width: 87px;
+            height: 51px;
+            background-image: url('../images/floating-dot.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation: float 3s ease-in-out infinite;
+
+            @media (max-width: $mobile-breakpoint){
+                top: 30px;
+                right: 120px;
+                width: 66px;
+                height: 39px;
+            }
+        }
+    }
+
+    .img-profile-picture{
+        width: 350px;
+        height: auto;
+
+        @media (max-width: $mobile-breakpoint){
+            width: 220px;
+        }
+    }
+
+    @keyframes float {
+        0% {
+            transform: translate(50%, -50%);
+        }
+        50% {
+            transform: translate(50%, -60%);
+        }
+        100% {
+            transform: translate(50%, -50%);
+        }
+    }
+}

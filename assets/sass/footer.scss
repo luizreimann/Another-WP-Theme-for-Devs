@@ -1,0 +1,21 @@
+.footer{
+    background-color: #000;
+
+    .footer-menu{
+        margin: 0;
+
+        a{
+            color: $text-gray;
+            text-decoration: none;
+            transition: 0.3s all;
+            
+            &:hover{
+                color: $text-white;
+                text-decoration: underline;
+            }
+        }
+    }
+    .copyright{
+        color: $text-gray;
+    }
+}

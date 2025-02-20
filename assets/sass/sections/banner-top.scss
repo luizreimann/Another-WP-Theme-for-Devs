@@ -1,0 +1,51 @@
+.banner-top{
+
+    min-height: 80vh;
+    margin-top: -60px; // Transparent header
+
+    background-image: url('../images/banner-top.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+    h1,h2,a{
+        color: $text-gray;
+
+        strong{
+            color: $text-white;
+        }
+    }
+
+    a{
+        padding: 5px 25px;
+        border: 1px solid $text-gray;
+        border-radius: $border-radius;
+        text-decoration: none;
+        transition: 0.3s all;
+
+        &:hover{
+            color: $text-white;
+            border-color: #fff;
+            border-width: 2px;
+        }
+    }
+
+    // Typewriter animation
+    @keyframes blink {
+    50% {
+        opacity: 0;
+    }
+    }
+
+    .blinking-cursor {
+    &::after {
+        content: '|';
+        font-size: 24px;
+        display: inline-block;
+        animation: blink 1s step-start infinite;
+    }
+    }
+}

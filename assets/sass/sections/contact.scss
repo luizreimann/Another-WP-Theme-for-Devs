@@ -1,0 +1,116 @@
+.contact{
+
+    background-image: url('../images/banner-contact.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h2{
+        color: $text-white;
+        font-weight: $bold;
+    }
+
+    form{
+        input, textarea{
+            border: 1px solid transparent;
+            border-bottom: 1px solid $text-gray;
+            color: $text-white;
+            background-color: transparent;
+            transition: 0.3s all;
+            width: 100%;
+            &::placeholder{
+                color: $text-gray;
+                opacity: 1;
+            }
+            &:focus-visible{
+                border: 1px solid $text-gray;
+                outline: 0;
+            }
+            &[type="submit"]{
+                width: 25%;
+                @media (max-width: $mobile-breakpoint){
+                    width: 100%;
+                }
+
+                &:hover{
+                    background-color: $text-white;
+                    color: #000;
+                    border-color: $text-white;
+                }
+            }
+        }
+    }
+
+    .social{
+        background-color: #0d0d0d;
+        border-radius: 30px;
+
+        a {
+            color: $text-gray;
+            text-decoration: none;
+            transition: 0.3s all;
+        
+            .email {
+                margin-bottom: 2rem;
+        
+                &::before {
+                    content: "";
+                    display: inline-block;
+                    background-image: url('../images/icon-envelope.png');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    width: 30px;
+                    height: auto;
+                    aspect-ratio: 1;
+                    margin-right: 10px;
+                    margin-bottom: -4px;
+                    vertical-align: middle;
+                }
+            }
+
+            .github{
+                margin-bottom: 2rem;
+
+                &::before {
+                    content: "";
+                    display: inline-block;
+                    background-image: url('../images/icon-github.png');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    width: 30px;
+                    height: auto;
+                    aspect-ratio: 1;
+                    margin-right: 10px;
+                    margin-bottom: -4px;
+                    vertical-align: middle;
+                }
+            }
+
+            .linkedin{
+                margin-bottom: 0;
+
+                &::before {
+                    content: "";
+                    display: inline-block;
+                    background-image: url('../images/icon-linkedin.png');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    width: 30px;
+                    height: auto;
+                    aspect-ratio: 1;
+                    margin-right: 10px;
+                    margin-bottom: 4px;
+                    vertical-align: middle;
+                }
+            }
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }    
+        
+        @media (max-width: $mobile-breakpoint){
+            border-radius: 20px;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+.wordpress{
+
+    background-color: #f2f2f2;
+
+    h2,h3{
+        color: #000;
+        font-weight: $bold;
+    }
+
+    .wp-projects{
+        .wp-project-content{
+            padding: 20px;
+
+            img{
+                border-radius: 30px;
+                @media (max-width: $mobile-breakpoint){
+                    border-radius: 20px;
+                }
+            }
+            p{
+                color: #000;
+            }
+            a{
+                color: #808080;
+                border: 1px solid #808080;
+                border-radius: 30px;
+                padding: 7px 20px 7px 20px;
+                text-decoration: none;
+                margin-bottom: 20px;
+                transition: 0.3s all;
+
+                &:hover{
+                    color: #000;
+                    border-color: #000;
+                    border-width: 2px;
+                }
+            }
+        }
+
+        .wp-project-prev, .wp-project-next {
+            width: 40px;
+            height: 40px;
+            background-color: $text-white;
+            background-size: 20px 20px;
+            background-repeat: no-repeat;
+            background-position: center;
+            border: 1px solid #000;
+            border-radius: 100px;
+            cursor: pointer;
+        }
+
+        .wp-project-next {
+            background-image: url('../images/arrow.png');
+            position: absolute;
+            top: 45%;
+            right: -30px;
+            z-index: 1;
+        }
+
+        .wp-project-prev {
+            background-image: url('../images/arrow.png');
+            transform: scaleX(-1);
+            position: absolute;
+            top: 45%;
+            left: -30px;
+            z-index: 1;
+        }
+    }
+}
+
